@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Config/css/final.css">
+    <title>SPORTS EVENTS CREATOR</title>
+</head>
+<body class="bg-gray-800">
+    <nav class="h-16 bg-blue-500">
+        <h1 class="pl-8 py-3 text-2xl text-gray-900 font-bold">Sports Events</h1>
+    </nav>
+    <div class="flex justify-center mt-12">
+        <div class="flex flex-row w-64 h-8 bg-gray-800 rounded-xl border-4 border-blue-500">
+            <button class="h-6 w-32 pb-2 bg-white rounded-bl-lg rounded-tl-lg font-semibold text-gray-800" id="botonMy">My events</button>
+            <div class="h-6 w-1 bg-blue-500"></div>
+            <button class="h-6 w-32 pb-2 bg-gray-800 rounded-br-lg rounded-tr-lg text-white font-semibold" id="botonCreate">Create event</button>
+        </div>
+    </div>
+    <main id="container">
+    <!--SECTION MY EVENTS-->
+        <section id="section-my" class="flex flex-col items-center mt-8">
+            <div class="flex flex-col">
+                <h1 class="self-center text-white text-xl font-bold">Search an event</h1>
+                <form class="flex flex-row w-72 h-8 mt-1 mb-8 self-center md:w-80" id="search">
+                    <input type="text" class="h-12 mt-4 w-72 text-xl md:w-80" id="search-input">
+                </form>
+            </div>
+            <div class="flex flex-col items-center w-72 md:w-80" id="events-container">
+            </div>
+        </section>
+    <!--SECTION CREATE EVENTS-->
+        <section id="section-create" class="hidden">
+                <div class="h-96 w-64 bg-gray-100 md:w-80">
+                    <div class="h-14 w-full bg-gray-700">
+                        <h1 class="text-center text-white text-xl py-3 font-bold">Create event</h1>
+                    </div>
+                    <form class="relative grid grid-cols-2 grid-row-6" id="form">
+                        <input type="text" placeholder="Name of the event" class="col-span-2 mx-auto mt-4 h-8 w-52 border-2 text-base bg-gray-300" id="name">
+                        <label for="sport" class="ml-6 mt-4">Select a sport</label>
+                        <select name="sport" id="sport" class="mx-auto mt-4 h-8 w-24 border-2 text-base bg-gray-300">
+                            <option value="Football">Football</option>
+                            <option value="Basketball">Basketball</option>
+                            <option value="Baseball">Baseball</option>
+                        </select>
+                        <label for="type" class="ml-6 mt-4">Type of event</label>
+                        <select name="type" id="type" class="mx-auto mt-4 h-8 w-24 border-2 text-base bg-gray-300">
+                            <option value="Training">Training</option>
+                            <option value="Competition">Competition</option>
+                        </select>
+                        <label for="lvl" class="ml-6 mt-4">Level</label>
+                        <select name="lvl" id="lvl" class="mx-auto mt-4 h-8 w-24 border-2 text-base bg-gray-300">
+                            <option value="Beginner">Beginner</option>
+                            <option value="Mid-level">Mid-level</option>
+                            <option value="Semipro">Semipro</option>
+                            <option value="Professional">Professional</option>
+                        </select>
+                        <label for="gender" class="ml-6 mt-4">Gender</label>
+                        <select name="gender" id="gender" class="mx-auto mt-4 h-8 w-24 border-2 text-base bg-gray-300">
+                            <option value="Female">Female</option>
+                            <option value="Male">Male</option>
+                            <option value="Indifferent">Indifferent</option>
+                        </select>
+                        <input type="submit" value="Create" class="h-8 w-20 col-span-2 mx-auto mt-8 rounded bg-blue-500 border-2 border-gray-500 text-white font-bold hover:bg-gray-500 ">
+                    </form>
+                </div>   
+        </section>
+    </main>
+</body>
+<script src="index.js"></script>
+<script src="button.js"></script>
+</html>
